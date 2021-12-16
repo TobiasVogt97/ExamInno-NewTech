@@ -72,6 +72,7 @@ const MyActivitiesTest2 = ({route, navigation}) => {
             if (hostingIds !== undefined) {
                 hostingIds.forEach(function (Ids) {
                     db.ref(`/events/${Ids}`).once('value', (snapshot) => {
+                        console.log(snapshot.val());
                         var key = Object.keys(snapshot.val());
 
                         arrayForHostingData.push({
@@ -97,6 +98,7 @@ const MyActivitiesTest2 = ({route, navigation}) => {
                 bookingIds.forEach(function (Ids) {
                     db.ref(`/events/${Ids}`).once('value', (snapshot) => {
                         if (snapshot.val() === null) {
+                            console.log("her: "+snapshot.val());
                             var newArray = bookingIds;
                             var index = bookingIds.indexOf(Ids)
                             newArray.splice(index, 1)

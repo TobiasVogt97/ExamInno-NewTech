@@ -117,8 +117,7 @@ const EventDetails = ({route, navigation}) => {
                         //Brugeren får en bekræftelse på tilmeldingen.
                         Alert.alert(
                             "Event joined",
-                            `You have joined the event ${eventDetails.name}. The event will appear under "My bookings".
-                            If the event does not appear, try clicking the "Refresh events" in the top right corner`,
+                            `You have joined the event ${eventDetails.name}. The event will appear under "My bookings". If the event does not appear, try clicking the "Refresh events" in the top right corner`,
                             [
                                 {
                                     text: "OK"

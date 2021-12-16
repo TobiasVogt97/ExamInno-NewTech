@@ -21,8 +21,8 @@ const createActivity = ({navigation}) => {
     const [latestUpdate, setUpdate] = useState("Start");
     const [createActivityCategory, SetCategory] = useState("");
     const [createLocation, SetLocation] = useState("");
-    const [createParticipantNumber, SetNumber] = useState(0);
-    const [createActivityDate, SetDate] = useState(currentDate.getFullYear() + '-' + currentDate.getMonth() + '-' + currentDate.getDate());
+    const [createParticipantNumber, SetNumber] = useState(1);
+    const [createActivityDate, SetDate] = useState(currentDate.getDate() + '-' + currentDate.getMonth()+1 + '-' + currentDate.getFullYear());
     const [createDescription, SetDescription] = useState("");
     const [errorMessage, setErrorMessage] = useState(null);
     const [dialog, SetDialog] = useState(false);
@@ -120,7 +120,7 @@ const createActivity = ({navigation}) => {
                             SetDialog(false);
                             Alert.alert(
                                 "Event Confirmation",
-                                "Event is created. You should be able to see it under 'My Bookings'",
+                                "Event is created. You should be able to see it under 'My Events'",
                                 [
                                     {
                                         text: "OK"
